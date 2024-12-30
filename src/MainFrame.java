@@ -2,6 +2,7 @@ import java.awt.BorderLayout;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBoxMenuItem;
@@ -77,6 +78,15 @@ public class MainFrame extends JFrame{
 				
 				JCheckBoxMenuItem menuItem = (JCheckBoxMenuItem)e.getSource();
 				formPanel.setVisible(menuItem.isSelected());
+			}
+		});
+		fileMenu.setMnemonic(KeyEvent.VK_F);
+		exitItem.setMnemonic(KeyEvent.VK_X);
+		exitItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				System.exit(0);
+				
 			}
 		});
 		
